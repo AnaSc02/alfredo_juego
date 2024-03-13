@@ -1,17 +1,17 @@
 const symbols = ["🍒", "🍊", "🍋", "🍇", "🍉"];
 
-function A jugar!() {
+function spin() {
     const reels = document.querySelectorAll(".reel");
     const result = document.getElementById("result");
 
-    let A jugar!Result = [];
+    let spinResult = [];
     reels.forEach(reel => {
         const randomIndex = Math.floor(Math.random() * symbols.length);
         reel.textContent = symbols[randomIndex];
-        A jugar!Result.push(randomIndex);
+        spinResult.push(randomIndex);
     });
 
-    if (A jugar!Result[0] === A jugar!Result[1] && A jugar!Result[1] === A jugar!Result[2]) {
+    if (spinResult[0] === spinResult[1] && spinResult[1] === spinResult[2]) {
         result.textContent = "¡Ganaste!";
     } else {
         result.textContent = "¡Perdiste!";
